@@ -1,80 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= item.Name %> - Details</title>
-  <link rel="stylesheet" href="/style.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    h1 {
-      background: #004080;
-      color: white;
-      padding: 15px;
-      margin: 0;
-    }
-    table {
-      margin: 40px auto;
-      border-collapse: collapse;
-      width: 70%;
-      background: white;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    th {
-      text-align: left;
-      background: #0073e6;
-      color: white;
-      padding: 12px;
-      width: 40%;
-    }
-    td {
-      text-align: left;
-      padding: 12px;
-      border: 1px solid #ddd;
-    }
-    .container {
-      margin: 20px auto;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-    .container a {
-      display: inline-block;
-      padding: 12px 20px;
-      background: #0073e6;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-    .container a:hover {
-      background: #005bb5;
-    }
-  </style>
-</head>
+<html>
+<head><title><%= type %> Equipment</title></head>
 <body>
-  <h1><%= item.Name %> - Details</h1>
-
-  <table>
-    <% Object.keys(item).forEach(key => { %>
-      <% if (key !== "Name") { %>
-        <tr>
-          <th><%= key.toUpperCase() %></th>
-          <td><%= item[key] %></td>
-        </tr>
-      <% } %>
-    <% }) %>
-  </table>
-
-  <div class="container">
-    <a href="/equipment/<%= type.toLowerCase() %>">⬅ Back to <%= type %> Equipment</a>
-    <a href="/home">🏠 Home</a>
-  </div>
+<h2><%= type %> Equipment</h2>
+<table border="1">
+<tr><th>Name</th><th>Specs</th><th>Location</th></tr>
+<% data.forEach(item => { %>
+<tr>
+  <td><%= item.Name %></td>
+  <td><%= item.Specs %></td>
+  <td><%= item.Location %></td>
+</tr>
+<% }) %>
+</table>
+<a href="/home">Back</a>
 </body>
 </html>
