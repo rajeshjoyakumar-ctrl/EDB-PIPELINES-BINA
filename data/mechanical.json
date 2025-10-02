@@ -1,1 +1,34 @@
-[{"Name":"Pump-101","Specs":"100 HP","Location":"Plant-1"}]
+[
+  {
+    "Name": "Main Line Pump C/D",
+    "TAG": "10-100-BP-001C/D",
+    "MAKE": "DMW Corporation Tokyo Japan",
+    "Sr. No": "1111426-1/2",
+    "TYPE": "DMF-SPK7-M",
+    "CAPACITY": "730 m3/Hr",
+    "SPEED": "2985 min^-1",
+    "SUCTION PRESSURE TRIP": "2.0 kg/cm2",
+    "DISCHARGE PRESSURE TRIP": "92.5 kg/cm2",
+    "HEAD": "1070 M",
+    "STAGE": "7",
+    "SIZE": "250 X 200",
+    "DESIGN PRESSURE": "136 Kg/cm2",
+    "TEST PRESSURE": "210 Kg/cm2",
+    "DESIGN TEMP.": "65 °C",
+    "Location": "Pump House"
+  },
+  {
+    "Name": "Cooling Water Pump A",
+    "TAG": "20-200-CP-001A",
+    "MAKE": "Kirloskar Brothers Ltd",
+    "Sr. No": "CW-44221",
+    "TYPE": "Horizontal Split Case",
+    "CAPACITY": "500 m3/Hr",
+    "SPEED": "1480 min^-1",
+    "HEAD": "85 M",
+    "STAGE": "1",
+    "DESIGN PRESSURE": "25 Kg/cm2",
+    "DESIGN TEMP.": "45 °C",
+    "Location": "Utility Block"
+  }
+]
