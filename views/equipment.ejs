@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title><%= type %> Equipment</title></head>
+<body>
+<h2><%= type %> Equipment</h2>
+<table border="1">
+<tr><th>Name</th><th>Specs</th><th>Location</th></tr>
+<% data.forEach(item => { %>
+<tr>
+  <td><%= item.Name %></td>
+  <td><%= item.Specs %></td>
+  <td><%= item.Location %></td>
+</tr>
+<% }) %>
+</table>
+<a href="/home">Back</a>
+</body>
+</html>
