@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head><title><%= type %> Equipment</title></head>
+<head>
+    <title><%= type %> Equipment</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
 <body>
-<h2><%= type %> Equipment</h2>
-<table border="1">
-<tr><th>Name</th><th>Specs</th><th>Location</th></tr>
-<% data.forEach(item => { %>
-<tr>
-  <td><%= item.Name %></td>
-  <td><%= item.Specs %></td>
-  <td><%= item.Location %></td>
-</tr>
-<% }) %>
-</table>
-<a href="/home">Back</a>
+    <h1><%= type %> Equipment</h1>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Specs</th>
+            <th>Location</th>
+        </tr>
+        <% data.forEach(item => { %>
+        <tr>
+            <td>
+                <a href="/equipment/<%= type.toLowerCase() %>/<%= encodeURIComponent(item.Name) %>">
+                    <%= item.Name %>
+                </a>
+            </td>
+            <td><%= item.Specs %></td>
+            <td><%= item.Location %></td>
+        </tr>
+        <% }) %>
+    </table>
+
+    <div class="container">
+        <a href="/home">⬅ Back</a>
+    </div>
 </body>
 </html>
