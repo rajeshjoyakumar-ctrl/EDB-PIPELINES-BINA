@@ -1,1 +1,24 @@
-[{"Name":"Pump-101","Specs":"100 HP","Location":"Plant-1"}]
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mechanical Equipment</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Mechanical Equipment</h1>
+    <div class="container">
+
+        <% if (equipment && equipment.length > 0) { %>
+            <% equipment.forEach(function(item) { %>
+                <a href="/equipment/mechanical/<%= encodeURIComponent(item.Name) %>">
+                    <%= item.Name %>
+                </a><br>
+            <% }); %>
+        <% } else { %>
+            <p>No equipment found.</p>
+        <% } %>
+
+        <a href="/">⬅ Back to Home</a>
+    </div>
+</body>
+</html>
