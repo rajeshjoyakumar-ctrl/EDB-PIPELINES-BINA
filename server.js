@@ -34,6 +34,16 @@ function isAuthenticated(req, res, next) {
 app.get('/mechanical', (req, res) => {
   res.render('mechanical');   // ← this should match your mechanical.ejs filename
 });
+app.get('/mech-pump', (req, res) => {
+  res.render('mech-pump');   // ← this should match your mechanical.ejs filename
+});
+
+
+
+
+
+
+
 
 app.get('/electrical', (req, res) => {
   res.render('electrical');
