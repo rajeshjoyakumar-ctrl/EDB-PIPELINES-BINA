@@ -31,6 +31,11 @@ function isAuthenticated(req, res, next) {
 }
 
 // Routes
+app.get('/mechanical', (req, res) => {
+  res.render('mechanical');   // ← this should match your mechanical.ejs filename
+});
+
+
 app.get("/", (req, res) => {
     if (req.session.user) res.redirect("/home");
     else res.redirect("/login");
