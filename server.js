@@ -35,6 +35,14 @@ app.get('/mechanical', (req, res) => {
   res.render('mechanical');   // ← this should match your mechanical.ejs filename
 });
 
+app.get('/electrical', (req, res) => {
+  res.render('electrical');
+});
+
+app.get('/instrument', (req, res) => {
+  res.render('instrument');
+});
+
 
 app.get("/", (req, res) => {
     if (req.session.user) res.redirect("/home");
