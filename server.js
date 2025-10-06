@@ -31,6 +31,11 @@ function isAuthenticated(req, res, next) {
 }
 
 // Routes
+
+app.get('/bpcl-logo', (req, res) => {
+  res.render('bpcl-logo');   // ← this should match your mechanical.ejs filename
+});
+
 app.get('/mechanical', (req, res) => {
   res.render('mechanical');   // ← this should match your mechanical.ejs filename
 });
